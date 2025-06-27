@@ -76,7 +76,7 @@ The client will run on [http://localhost:3000](http://localhost:3000)
 
 ## Usage
 
-1. Open [http://localhost:3000](http://localhost:3000) in your browser.
+1. Open [http://localhost:3000](http://localhost:3000) in your browser in two seperate browsers and choose one name and start chatting.
 2. Log in as `alice` or `bob`.
 3. Start chatting in real time!
 
