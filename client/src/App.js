@@ -55,6 +55,14 @@ function App() {
         }
     };
 
+    const handleLogout = () => {
+        setUsername("");
+        setInputName("");
+        setMessages([]);
+        setMessage("");
+        setError("");
+    };
+
     if (!username) {
         return (
             <div className="login-container">
@@ -77,10 +85,15 @@ function App() {
     return (
         <div className="chat-container">
             <header>
-                <h2>Chat App</h2>
-                <span className="user">
-                    Logged in as <b>{username}</b>
-                </span>
+                <div className="header-left">
+                    <h2>Chat App</h2>
+                    <span className="user">
+                        Logged in as <b>{username}</b>
+                    </span>
+                </div>
+                <button className="logout-btn" onClick={handleLogout}>
+                    Logout
+                </button>
             </header>
             <div className="messages">
                 {messages.map((msg, i) => (
