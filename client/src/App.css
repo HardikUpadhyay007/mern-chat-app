@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f4f6fb;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
 }
 
 .login-container {
@@ -9,66 +10,89 @@ body {
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background: #f4f6fb;
+    background: #0a0a0a;
 }
 
 .login-form {
-    background: #fff;
-    padding: 2rem 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    background: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     min-width: 300px;
 }
+
 .login-form h2 {
-    margin: 0 0 0.5rem 0;
+    margin: 0;
     text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
+
 .login-form input {
-    padding: 0.7rem;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
+    padding: 0.8rem;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
     font-size: 1rem;
+    background: #2a2a2a;
+    color: #ffffff;
+    transition: border-color 0.2s;
 }
+
+.login-form input:focus {
+    outline: none;
+    border-color: #666666;
+}
+
+.login-form input::placeholder {
+    color: #888888;
+}
+
 .login-form button {
-    padding: 0.7rem;
-    background: #4f8cff;
-    color: #fff;
+    padding: 0.8rem;
+    background: #ffffff;
+    color: #000000;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.2s;
 }
+
 .login-form button:hover {
-    background: #2563eb;
+    background: #e5e5e5;
+    transform: translateY(-1px);
 }
+
 .error {
-    color: #e53e3e;
+    color: #ff6b6b;
     text-align: center;
     font-size: 0.95rem;
 }
 
 .chat-container {
-    max-width: 480px;
+    max-width: 500px;
     margin: 2rem auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    background: #1a1a1a;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 85vh;
 }
+
 header {
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 1.5rem;
+    border-bottom: 1px solid #2a2a2a;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f9fafb;
-    border-radius: 12px 12px 0 0;
+    background: #1a1a1a;
+    border-radius: 8px 8px 0 0;
 }
 
 .header-left {
@@ -79,101 +103,154 @@ header {
 
 .header-left h2 {
     margin: 0;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 .logout-btn {
     padding: 0.5rem 1rem;
-    background: #dc2626;
-    color: white;
-    border: none;
-    border-radius: 6px;
+    background: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 0.9rem;
-    transition: background 0.2s;
+    font-weight: 500;
+    transition: all 0.2s;
 }
 
 .logout-btn:hover {
-    background: #b91c1c;
+    background: #3a3a3a;
+    transform: translateY(-1px);
 }
+
 .user {
-    font-size: 0.95rem;
-    color: #4f8cff;
+    font-size: 0.9rem;
+    color: #888888;
+    font-weight: 500;
 }
 .messages {
     flex: 1;
     overflow-y: auto;
-    padding: 1rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    background: #f4f6fb;
+    gap: 1rem;
+    background: #0a0a0a;
 }
+
 .message {
-    background: #e5e7eb;
-    padding: 0.6rem 1rem;
+    background: #2a2a2a;
+    padding: 0.8rem 1rem;
     border-radius: 8px;
     max-width: 75%;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    position: relative;
+    border: 1px solid #3a3a3a;
 }
+
 .message.own {
-    background: #4f8cff;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
     align-self: flex-end;
+    border: 1px solid #4a4a4a;
 }
+
 .msg-user {
     font-weight: 600;
-    font-size: 0.92rem;
-    margin-bottom: 0.1rem;
-}
-.msg-text {
-    margin-bottom: 0.2rem;
-}
-.msg-time {
     font-size: 0.8rem;
-    color: #6b7280;
-    align-self: flex-end;
+    margin-bottom: 0.3rem;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
+
+.message.own .msg-user {
+    color: #666666;
+}
+
+.msg-text {
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}
+
+.msg-time {
+    font-size: 0.7rem;
+    color: #666666;
+    align-self: flex-end;
+    margin-top: 0.2rem;
+}
+
 .message.own .msg-time {
-    color: #dbeafe;
+    color: #888888;
 }
 .input-form {
     display: flex;
-    padding: 1rem;
-    border-top: 1px solid #f0f0f0;
-    background: #f9fafb;
-    border-radius: 0 0 12px 12px;
+    padding: 1.5rem;
+    border-top: 1px solid #2a2a2a;
+    background: #1a1a1a;
+    border-radius: 0 0 8px 8px;
+    gap: 0.8rem;
 }
+
 .input-form input {
     flex: 1;
-    padding: 0.7rem;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
+    padding: 0.8rem;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
     font-size: 1rem;
-    margin-right: 0.5rem;
+    background: #2a2a2a;
+    color: #ffffff;
+    transition: border-color 0.2s;
 }
+
+.input-form input:focus {
+    outline: none;
+    border-color: #666666;
+}
+
+.input-form input::placeholder {
+    color: #888888;
+}
+
 .input-form button {
-    padding: 0.7rem 1.2rem;
-    background: #4f8cff;
-    color: #fff;
+    padding: 0.8rem 1.5rem;
+    background: #ffffff;
+    color: #000000;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.2s;
 }
+
+.input-form button:hover {
+    background: #e5e5e5;
+    transform: translateY(-1px);
+}
+
 .input-form button:disabled {
-    background: #a5b4fc;
+    background: #3a3a3a;
+    color: #666666;
     cursor: not-allowed;
+    transform: none;
 }
+
 @media (max-width: 600px) {
     .chat-container {
         max-width: 100vw;
         height: 100vh;
         margin: 0;
         border-radius: 0;
+        border: none;
+    }
+
+    .login-form {
+        min-width: 280px;
+        margin: 1rem;
     }
 }
